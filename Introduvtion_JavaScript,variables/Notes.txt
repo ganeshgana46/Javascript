@@ -1,0 +1,76 @@
+JavaScript :
+   >  JS developed by Brenden Eicn at Netscapes Navigater browser.
+   >  JS is used to provide dynamic nature to the web pages.
+   >  JS is used to developed dynamic web pages.
+   >  Light weight programming Language.
+   >  dynamically typed programming Language.
+   >  initially the  language was named as LiveScript later changed to Javacript.
+
+>>> JS wsa initially developed for implementation of client side applications, later JS is everywhere, we
+    can write server side applications using JS also.
+
+    Application areas where JS is used :
+
+    1.Client side Apps(Front end application development)
+    2.server side Apps(Backend App Development)
+    3.IOT (Internet of Things)
+    4.Block chain
+    5.Games
+    6.Browser Extensions
+    7.Automation Testing
+
+Scripting Language : Any language that is not compiled but interprented directly is known as JavaScript.
+
+
+Where to Use :
+
+JavaScript code is inserted between <script> and </script> tags.
+
+1.we can use JS in <head>.
+2.we can use JS in <body>.
+3.we can use external JS file by using <script src="javascript.js"><script>
+
+Variables :
+     A name given to the memory location and it is used to store the data.
+
+     syntax : var var_name = value;
+     eg : var name = "ganesh";
+
+Problem Statement :
+
+ Implement a login system with some dummy username / passwords.
+
+
+ <html>
+    <head>
+
+    </head>
+    <body>
+
+        
+            <input id="username" type="text" placeholder="username"><br><br>
+            <input id="password" type="password" placeholder="password"><br><br>
+            <button onclick="authenticate()">Login</button>
+        
+
+        <script>
+
+           function authenticate(){
+                  
+               var username = document.getElementById("username").value;
+               var password = document.getElementById("password").value;
+               console.log(username);
+               console.log(password);
+
+               if(username=="digital" && password=="lync"){
+                alert("login success");
+               }else{
+                alert("login failure");
+               }
+
+           }
+
+        </script>
+
+    </body>
+</html>

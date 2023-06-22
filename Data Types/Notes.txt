@@ -1,0 +1,166 @@
+Data Types :
+
+   Data type specify the different sizes and values that can be 
+   stored in a variable.
+                        (or)
+    A datatype represents the type of data stored in a variable. Based on
+    data type, the memory allocate the memory for the data.
+
+    syntax :
+           
+        var var_name = value;
+
+        The data type of a variable is decided based on the value that is stored.
+
+In JS, we have 2 types of data types
+
+Primitive Types :
+
+1.number           >> undefined
+2.boolean          >> null
+3.string
+                      null :
+                      if we assign value then we can remove that 
+                      from browser.so we use null
+                      ex :
+                      a={
+                        "username" : "gana"
+                      }
+                      console.log(a);//gana
+                      a = null
+                      console.log(a);
+                      after this we can't access that again
+
+ 
+
+number : number type is considered for any type of number in JS.
+
+code :
+
+           var a = 100;
+           console.log(typeof a);
+           var rating = 4.14;
+           console.log(typeof rating);
+
+           //it is useful to know data type yes it is....
+
+           function checkEligibility(age){
+
+                if(typeof age == "number"){
+                    if(age>=18){
+                        console.log("eligible for vote");
+                    }
+                    else{
+                        console.log("not eligible for vote");
+                    }
+                }
+                else{
+                    console.log("Invalid input, please enter a number");
+                }    
+           }
+           checkEligibility(19);
+           </script>
+
+boolean : true or false
+
+code :
+
+                function f1(isDone){
+                if(typeof isDone == "boolean"){
+                    if(isDone == false){
+                        console.log("work is not done yet");
+                    }
+                    else{
+                        console.log("work is done");
+                    }
+                }
+                else{
+                    console.log("Invalid input")
+                }
+                
+              }
+              f1(true);
+
+string : set of characters
+
+syntax :
+var str = " ";
+or
+var str = ' ';
+
+code :
+
+            var str ="hello";
+            console.log(typeof str);
+
+            var firstname = "digital";
+            var lastname = "lync";
+            firstname.concat(lastname);
+            console.log(firstname);
+
+In JS, Strings are immutable, which means once a string created, we cannot modify it.
+However, if we want a latest value to be updated to a string, then we can re-assign.
+
+code :
+
+var str ="hello";
+            console.log(typeof str);
+
+            var firstname = "digital";
+            var lastname = "lync";
+            firstname = firstname.concat(lastname);
+            console.log(firstname);
+
+
+Non-Primitive data types :
+
+1.arrays
+2.objects
+
+Arrays : 
+    
+    store multiple values in single variable.
+                      (or)
+    An Array is a linear data structure which stores the data in A
+    sequential order.
+
+    In JS, Arrays can store different types of elements.
+
+    JS allows the arrays to be dynamic, which means, the array size Automatically
+    gets increased based on the elements.
+
+    syntax :
+
+    var array_name = [];
+
+    code :
+
+    var users =["innocent","joyboy","creul"];
+    console.log(user);
+
+    console.log(user[0]);
+    console.log(user[1]);
+    console.log(user[2]);
+    console.log(user[3]);
+    users[100] = 900;
+    console.log(users);
+
+Objects :
+     Store collection of data.
+               (or)
+     An object is a programmatic representation of a realtime object.
+     
+>> Objects are used for storing key-value pairs and they have no fixed length.
+
+syntax :
+
+var obj ={
+    key : value;
+    .
+    .
+    .
+}
+ 
+keys must be unique and expected to be Strings.
+
+values need not be unique, can be of any datatype.

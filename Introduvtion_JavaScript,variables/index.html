@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        
+            <input id="username" type="text" placeholder="username"><br><br>
+            <input id="password" type="password" placeholder="password"><br><br>
+            <button onclick="authenticate()">Login</button>
+        
+
+        <script>
+
+           function authenticate(){
+                  
+               var username = document.getElementById("username").value;
+               var password = document.getElementById("password").value;
+               console.log(username);
+               console.log(password);
+
+               if(username=="digital" && password=="lync"){
+                alert("login success");
+               }else{
+                alert("login failure");
+               }
+
+           }
+
+        </script>
+
+    </body>
+</html>

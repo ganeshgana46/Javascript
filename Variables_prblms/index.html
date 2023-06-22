@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <i onclick="increment()" class="fa-solid fa-heart" style="font-size: 40px;"></i>
+        <h1 id="counter" style="display: inline;">0</h1>
+
+        <script>
+            likes = 0;
+            function increment() {
+                likes = likes + 1;
+                document.getElementById("counter").innerHTML=likes;
+            }
+        </script>
+    </body>
+</html>

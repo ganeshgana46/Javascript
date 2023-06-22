@@ -1,0 +1,54 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+       <script>
+
+          function f1(){
+            var a = 10;//LC
+            var b = 20;//LC
+            var c = 30;//LC
+
+            console.log(a);
+            console.log(b);
+            console.log(c);
+          }
+          f1();
+          console.log(a);//undefined
+
+
+
+        var a = 100; //GV
+        var b = 200; //GV
+
+        console.log(a); //100
+        console.log(b); //200
+
+        function f1(){
+            console.log(a); //100
+            a = 900;
+        }
+        function f2(){
+            console.log(b); //200
+        }
+        f1();
+        f2();
+        console.log(a); //900
+
+
+        var a = 100;
+        function f1(){
+            a = 0;
+            console.log(a); //0
+            a = 900;
+            console.log(a); //900
+        }
+        f1();
+        console.log(a); //900
+
+       </script>
+
+    </body>
+</html>

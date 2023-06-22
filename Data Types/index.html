@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <input id="email" size="40" type="text" placeholder="user email">
+        <button onclick="next()">next</button>
+       <script>
+
+        function next(){
+            var email = document.getElementById("email").value;
+            email = email.trim();
+            email = email.toLowerCase();
+            if(email.includes("@gmail.com")){
+
+            }else{
+                email = email + "@gmail.com"
+            }
+            document.getElementById("email").value = email;
+        }
+            
+        </script>
+       
+    </body>
+</html>

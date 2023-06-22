@@ -1,0 +1,136 @@
+Variables :
+    
+    A name given to the memory location and it is used to store the data.
+
+      var m ; //declaration
+      console.log(m);
+      m =200; //intialization
+      console.log(m);
+
+
+Variables are Containers for Storing Data
+
+JavaScript Variables can be declared in 4 ways:
+
+Automatically
+Using var
+Using let
+Using const
+
+
+There are two types of Variables :
+
+1.Local Variables :
+
+Any variable that is created inside a function is known as
+local variable.
+
+>>Local variable can be accessed with in the funtion only.They are
+  called as local variables just because, these variables are specific
+  to that function and can be visible only with in that function.
+
+eg1 : 
+
+<script>
+  function f1(){
+            var a = 10;//LC
+            var b = 20;//LC
+            var c = 30;//LC
+
+            console.log(a);
+            console.log(b);
+            console.log(c);
+          }
+          f1();
+          console.log(a);//undefined
+</script>
+
+
+2.Global Variables :
+
+Any Variable which we create outside any functions or blocks is known as global variable.
+
+>>Global Variables can be accessed any where.....
+
+eg1 :
+
+<script>
+        var a = 100; //GV
+        var b = 200; //GV
+
+        console.log(a); //100
+        console.log(b); //200
+
+        function f1(){
+            console.log(a); //100
+            a = 900;
+        }
+        function f2(){
+            console.log(b); //200
+        }
+        f1();
+        f2();
+        console.log(a); //900
+
+</script>
+
+eg2 :
+
+<script>
+     var a = 100;
+        function f1(){
+            var a = 0;
+            console.log(a); //0
+            a = 900;
+            console.log(a); //900
+        }
+        f1();
+        console.log(a); //100
+</script>
+
+eg3 :
+
+<script>
+     var a = 100;
+        function f1(){
+            a = 0;
+            console.log(a); //0
+            a = 900;
+            console.log(a); //900
+        }
+        f1();
+        console.log(a); //900
+</script>
+
+Variable Hoisting :
+
+It is a default process that happen in JS before the exceution
+of the code.
+
+Variable Hoisting is the process where all teh local variables,global
+variables are declared at the top before the execution of the code
+
+
+var a = 10;
+function f1(){
+    console.log(a);
+    var a = 900;
+}
+f1();
+
+process : variable Hoisting
+ 
+/*
+   var a; //undefined
+   a =10; //10
+   function f1(){
+    var a; //undefined
+    console.log(a); //undefined
+    a = 900; 
+   }
+   f1();
+*/
+
+Memory Allocation :
+
+>>>>>>>    Javacript visualizer

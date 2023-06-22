@@ -1,0 +1,53 @@
+problem statement :
+
+  Implement a like feature where each time the like icon is clicked, the
+  count should be incremented.
+
+  Algorithm :
+  
+  step 1 : get the like icon
+
+  step 2 : make the like icon clickable
+
+  step 3 : take variable, each time  the icon is clicked, increment the
+           value of the variable
+
+  step 4 : display the updated value on the UI every time user clicks on the icon.
+
+
+code :
+
+<html>
+    <head>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+       
+        <i onclick="increment()" class="fa fa-bell-o" style="font-size: 40px;"></i>
+        <h1 id="counter" style="display: inline;">0</h1>
+
+        <script>
+            var likes = 0;
+            function increment() {
+                //var likes = 0; //0 //not fit here
+                likes = likes + 1; //1
+                document.getElementById("counter").innerHTML = likes; //1
+            }
+        </script>
+
+    </body>
+</html>
+
+This code is secured or not...???
+
+Secured ?  Vulneraability Scan - SonarQube (DevOps)
+
+Performance ?
+
+Development means not about Writing code.....
+Development means Writing good code....
+
+Basics of computers : RAM, Processors, Internet, ethical hacking....before others break it the code
+U only break the code....
