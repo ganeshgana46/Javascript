@@ -111,6 +111,40 @@ var str ="hello";
             firstname = firstname.concat(lastname);
             console.log(firstname);
 
+            <html>
+    <head>
+
+    </head>
+    <body>
+        
+       <input id="email" type="text" placeholder="Email">
+       <button onClick="next()">Next</button>
+
+       <script>
+
+        function next(){
+
+          var email = document.getElementById("Email").value;
+          
+          email = email.trim();
+          email = email.toLowerCase();
+          if(email.includes('@gmail.com')){
+
+          }else{
+            email = email + '@gmail.comm';
+          }
+
+          document.getElementById("email").value = email;
+
+        }
+
+          
+
+       </script>
+
+    </body>
+</html>
+
 
 Non-Primitive data types :
 
@@ -164,3 +198,53 @@ var obj ={
 keys must be unique and expected to be Strings.
 
 values need not be unique, can be of any datatype.
+
+code snippet :
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <script>
+
+            var employee = {
+                
+                name : "Gana",
+                
+                address : {
+                    city : "Hindupur",
+                    state : "Andhra Pradesh",
+                    country : "India"
+                },
+
+                technologies : ["Java","JavaScript","HTML","CSS"],
+
+                projects : [
+                    {
+                        name : "traffic violation",
+                        client : "college"
+                    },
+                    {
+                        name : "road safety",
+                        client : "college"
+                    },
+                    {
+                        name : "Tindog",
+                        client : "college"
+                    }
+                ],
+                age : 27
+            }
+            
+
+            console.log(employee.name);
+            console.log(employee.address.country)
+            console.log(employee.technologies)
+            console.log(employee.projects[0]);
+            console.log(employee.projects[1].name);
+            console.log(employee.eid);
+        </script>
+    </body>
+</html>
