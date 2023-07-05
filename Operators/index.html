@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <script>
+
+            function Employee(name,eid,project){
+                this.name = name;
+                this.eid = eid;
+                this.project = project;
+            }
+
+            var employee1 = new Employee("gana",21,"traffic system");
+
+            var employee2 = {x :1,y:2};
+
+            console.log(employee1 instanceof Employee);//true
+
+            console.log(employee2 instanceof Employee);//false
+
+        </script>
+
+
+    </body>
+</html>

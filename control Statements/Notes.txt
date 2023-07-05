@@ -1,0 +1,265 @@
+Control Statements : 
+
+sequential : if, if - else,switch
+
+if :
+
+syntax :
+
+if(text-condition){
+    //code to be executed when condition is true;
+}
+
+eg :
+
+var age = 18;
+if(age>=18){
+    console.log("eligible);
+}
+
+if-else :
+
+syntax :
+
+if(text-condition)[
+    //code to be executed when condition is true;
+]else{
+    //code to be executed when condition is false;
+}
+
+eg :
+
+var age = 18;
+if(age>=18){
+    console.log("eligible);
+}else{
+    console.log("not eligible");
+}
+
+eg :
+
+//other than 0 it will be true
+
+if(0){
+    console.log(true);
+}else{
+    console.log(false);
+}
+//false
+
+if(2){
+    console.log(true);
+}else{
+    console.log(false);
+}
+//true
+
+if("hello"){
+    console.log(true);
+}else{
+    console.log(false);
+}
+//true
+
+var emp = null;
+if(emp){
+    console.log(true);
+}else{
+    console.log(false);
+}
+//false
+
+iterative : while,do-while,for
+jump : return, break, continue
+
+Switch :
+
+syntax :
+switch (expression) {
+    case value1 : //code
+    case value2 : //code
+    .
+    .
+    .
+    case valuen : //code
+}
+
+eg :
+
+        <script>
+
+          var choice = "javascript";
+
+          switch(choice){
+            case "java" : console.log("90 hours"); break;
+            case "javascript" : console.log("60 hours"); break;
+            case "python" : console.log("65 hours"); break;
+            default : console.log("course applicale");
+          }
+
+       </script>
+
+output: 60 hours
+
+Problem Statement :
+
+Create a drop down list, based on the selection of the city,
+display the test centers for driving license.
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <select onchange="displayTestCenters()" id="town">
+
+            <option>Select Your Town</option>
+            <option value="hin">Hindupur</option>
+            <option value="gor">Gorantla</option>
+            <option value="pen">Penukonda</option>
+            <option value="Par">Parigi</option>
+            <option value="lep">Lepakshi</option>
+
+        </select>
+
+        <div id="testCenters">
+
+        </div>
+
+        <script>
+
+            displayTestCenters();
+            function displayTestCenters(){
+
+                var testCenters = document.getElementById("testCenters");
+
+                var town = document.getElementById("town").value;
+
+                switch(town){
+
+                    case "hin" : testCenters.innerHTML = "<h1>subash nagar</h1><h1>subash nagari</h1>"; break;
+                    case "gor" : testCenters.innerHTML = "<h1>goratla nagar</h1><h1>goratla nagari</h1>"; break;
+                    case "pen" : testCenters.innerHTML = "<h1>penukonda nagar</h1><h1>penukonda nagari</h1>"; break;
+                    case "Par" : testCenters.innerHTML = "<h1>parigi nagar</h1><h1>subashi nagari</h1>"; break;
+                    case "lep" : testCenters.innerHTML = "<h1>Lepakshi nagar</h1><h1>Lepakshi nagari</h1>"; break;
+                    default : testCenters.innerHTML = "<h1>please select town</h1>"
+
+
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
+
+Problem Statement :
+
+Create a drop down list, based on the selection of the city,
+display the test centers in another drop down list..
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <select onchange="displayTestCenters()" id="town">
+
+            <option>Select Your Town</option>
+            <option value="hin">Hindupur</option>
+            <option value="gor">Gorantla</option>
+            <option value="pen">Penukonda</option>
+            <option value="Par">Parigi</option>
+            <option value="lep">Lepakshi</option>
+
+        </select>
+
+        <div id="msg">
+
+        </div>
+
+        <select id="selectedTown">
+
+        </select>
+
+        <script>
+
+            displayTestCenters();
+            function displayTestCenters(){
+
+                var msg = document.getElementById("msg");
+
+                var town = document.getElementById("town").value;
+
+                var selectedTown = document.getElementById("selectedTown");
+
+                switch(town){
+
+                    case "hin" : selectedTown.innerHTML = "<option>subash nagar</option><option>subash nagari</option>"; break;
+                    case "gor" : selectedTown.innerHTML = "<option>goratla nagar</option><option>goratla nagari</option>"; break;
+                    case "pen" : selectedTown.innerHTML = "<option>penukonda nagar</option><option>penukonda nagari</option>"; break;
+                    case "Par" : selectedTown.innerHTML = "<option>parigi nagar</option><option>subashi nagari</option>"; break;
+                    case "lep" : selectedTown.innerHTML = "<option>Lepakshi nagar</option><option>Lepakshi nagari</option>"; break;
+                    default : msg.innerHTML = "<h1>please select town</h1>"
+
+
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
+
+Problem Statement :
+
+"How Are You" Translate in different language
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <select onchange="displayLanguage()" id="lang">
+
+            <option>How Are You</option>
+            <option value="tel">Telugu</option>
+            <option value="hin">Hindi</option>
+            <option value="kan">Kannada</option>
+            <option value="mal">Malayalam</option>
+            <option value="jap">Japanese</option>
+
+        </select>
+
+        <div id="text">
+
+        </div>
+
+        <script>
+
+            displayLanguage();
+
+            function displayLanguage(){
+
+                var text = document.getElementById("text");
+
+                var lang = document.getElementById("lang").value;
+
+                switch(lang){
+
+                    case "tel" : text.innerHTML = "<h1>మీరు ఎలా ఉన్నారు</h1>"; break;
+                    case "hin" : text.innerHTML = "<h1>आप कैसे हैं</h1>"; break;
+                    case "kan" : text.innerHTML = "<h1>ನೀವು ಹೇಗಿದ್ದೀರಿ</h1>"; break;
+                    case "mal" : text.innerHTML = "<h1>സുഖമാണോ</h1>"; break;
+                    case "jap" : text.innerHTML = "<h1>元気ですか</h1>"; break;
+                    default : text.innerHTML = "<h1>Please Select Language</h1>"
+
+                }
+
+            }
+
+        </script>
+    </body>
+</html>

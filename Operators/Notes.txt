@@ -1,0 +1,194 @@
+Operators :
+
+    An operator is a symbol/ keyword that provides some functionality.
+
+example :
+
+10 + 20 => 30
+
+"hello" + "world" => hello world
+
+var a = 100;
+
+console.log(typeof a); // number
+
+Arthmetic Operations :
+
++,-,/,%,++,--
+
+code snippet : 
+
+<script>
+
+        var a = 100;
+
+        a++; //101
+        --a; //100
+        ++a; //101
+        a++; //102
+        console.log(a);
+
+ </script>
+
+ <script>
+
+           var a = 100;
+           //expression evaluated from left to right
+           console.log(a++);//100 //after //101
+           console.log(++a);//102 //after //102
+           console.log(a--);//102 //after //101
+           console.log(--a);//100 //after //100
+           console.log(a++);//100 //after //101
+           console.log(a);//101
+
+</script>
+
+interview question : 
+
+<script>
+ 
+          //JavaScript Operator Precedence go through this .....
+          var a =100,b=200,c="100";
+          console.log(a+c+b);//100100200
+          console.log(a+b+c);//300100
+          console.log(c+a+b);//100100200
+          console.log(c+(a+b));//100300
+
+</script>
+
+Comparision Operators :
+
+>,<,<=,>=,==,===,!=,?:
+
+<script>
+ 
+          var a=100, b=200, c="100", d="mjdsgfg";
+
+          console.log(a > b);//false
+          console.log(a < b);//true
+          console.log(a > c);//false
+          console.log(a > d);//false
+
+          console.log(a==c);//true content only,does not compare data type
+          console.log(a===c);//false compares content and datatype
+          console.log(a != c)//false //only content checked
+          console.log(a!==c)//true //both content and datatype checked 
+
+          //?:
+          var a = 18;
+          (a<=18)?console.log("eligible"):console.log("not");
+
+          //test-condition ? true : false
+           
+</script>
+
+problem statement : 
+
+Create username, password fields, once the user submit the form, capture the data and compare the data with
+dummy values, based on the results, display on the console.
+
+code :
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <input id="username" type="text" placeholder="username here"><br><br>
+        <input id="password" type="password" placeholder="password here"><br><br>
+        <button onclick="login()">Login</button>
+
+
+       <script>
+ 
+          function login(){
+            
+             uName = "Ganesh Gana";
+             upass = "gana321#"
+
+            var username =  document.getElementById("username").value;
+            var password =  document.getElementById("password").value;
+
+            uName == username && upass == password ? alert("Login Success"):alert("Login failed");
+
+          }
+          
+           
+       </script>
+
+
+    </body>
+</html>
+
+Logical Operators : 
+
+Logical AND (&&), OR (||) and NOT (!)
+
+//Logical AND (&&)          //Logical OR (||)
+            // True + True = True       // True + True = True
+            // True + False = False     // True + False = True
+            // False + True = False     // False + True = True
+            // False + False = False    // False + False = False
+            
+            var username ="Ganesh Gana", password = "gana321#";
+            console.log(username == "Ganesh Gana" && password == "gana321#")
+
+Problem Statement : FaceBook Dummy Login system
+
+<input id="userId" type="text" placeholder="email / Phone Number"><br><br>
+        <input id="password" type="password" placeholder="Password"><br><br>
+        <button onclick="login()">Login</button>
+
+        <script>
+
+            function login(){
+
+                var email = "gana@gmail.com";
+                var phn_number = 9100513921;
+                var upass = "gana321#";
+
+                var userId = document.getElementById("userId").value;
+                var password = document.getElementById("password").value;
+
+                userId == email || userId == phn_number && upass == password ? alert("Login Success"):alert("Login failed");
+
+            }
+
+        </script>
+
+typeof operator :
+
+var mobile = "9100513921";
+
+console.log(typeof mobile);
+
+Instance operator : 
+
+<script>
+
+            function Employee(name,eid,project){
+                this.name = name;
+                this.eid = eid;
+                this.project = project;
+            }
+
+            var employee1 = new Employee("gana",21,"traffic system");
+
+            var employee2 = {x :1,y:2};
+
+            console.log(employee1 instanceof Employee);//true
+
+            console.log(employee2 instanceof Employee);//false
+
+</script>
+
+Assignment Operators :
+
+=,+=,-=,
+
+     var a = 10;//Assignment operator
+     var a+=10;
+
+
+
