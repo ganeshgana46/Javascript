@@ -1,0 +1,256 @@
+Function : 
+
+A JavaScript function is a block of code designed to perform a particular task
+and which runs when we inkoke it.....
+
+syntax :
+
+function functionName(parameter1, parameter2){
+    //code goes here
+}
+functionName(parameter1, parameter2); //Here we invokke it...
+
+problem statement :
+
+<html>
+    <head>
+
+       
+    </head>
+    <body>
+
+        <input id="username" type="text" placeholder="username"><br><br>
+            <input id="password" type="password" placeholder="password"><br><br>
+            <button onclick="authenticate()">Login</button>
+        
+
+        <script>
+
+           function authenticate(){
+                  
+               var username = document.getElementById("username").value;
+               var password = document.getElementById("password").value;
+               console.log(username);
+               console.log(password);
+
+               if(username=="digital" && password=="lync"){
+                alert("login success");
+               }else{
+                alert("login failure");
+               }
+
+           }
+
+        </script>
+
+    </body>
+</html>
+
+<html>
+    <head>
+
+       
+    </head>
+    <body>
+
+        <script>
+
+            function f1(a,b){
+                console.log(a);
+                console.log(b);
+            }
+            function f1(){
+                console.log("f1() called");
+            }
+            f1(); //always called recent function only
+
+        </script>
+
+    </body>
+</html>
+
+Anonymous function :
+
+A function that can be passed as an argument is known as anonymous function...
+
+(function () {
+   //...
+});
+
+Example :
+
+<html>
+    <head>
+
+       
+    </head>
+    <body>
+
+        <script>
+
+            function f1(a){
+                a();
+            }
+            f1(function(){
+                console.log('f1');
+            });
+
+        </script>
+
+    </body>
+</html>
+
+<html>
+    <head>
+
+       
+    </head>
+    <body>
+
+        <script>
+
+            var arr = [10,20,30,40,50];
+
+            arr.forEach(function(value){
+                console.log("Value: "+ value);
+            });
+
+        </script>
+
+    </body>
+</html>
+
+Function expression :
+
+If an anonymous function is reffered with a variable is called expression function...
+
+syntax :
+
+// program to find the square of a number
+// function is declared inside the variable
+let x = function (num) { return num * num };
+console.log(x(4));
+
+Example :
+
+//Wrong program.....
+<html>
+    <head>
+
+       
+    </head>
+    <body>
+
+        <script>
+
+            function f1(a){
+                a();
+            }
+            function f2(b){
+                b();
+            }
+            function f3(c){
+                c();
+            }
+
+            f1(function(){
+                console.log('my callback function');
+            });
+
+            f2(function(){
+                console.log('my callback function');
+            });
+
+            f3(function(){
+                console.log('my callback function');
+            })
+
+        </script>
+
+    </body>
+</html>
+
+//correct program....
+<html>
+    <head>
+
+       
+    </head>
+    <body>
+
+        <script>
+
+            function f1(a){
+                a();
+            }
+            function f2(b){
+                b();
+            }
+            function f3(c){
+                c();
+            }
+
+            var callback = function(){
+                console.log("hi there....")
+            };
+
+            f1(callback);
+            f2(callback);
+            f3(callback);
+
+            callback = null;
+        </script>
+
+    </body>
+</html>
+
+First Class Function :
+
+If a function that can be passed as an argument, can be stored in a variable, can
+be returned from another function is known as first class function...
+
+<html>
+    <head>
+
+       
+    </head>
+    <body>
+
+        <script>
+
+            function f1(){
+                return function(){
+                    console.log("I am returned function...")
+                }
+            }
+            f1()();
+            
+        </script>
+
+    </body>
+</html>
+
+IIFE's :
+
+Immediately Invoked Function Expression
+
+IIFE are used to invoke functions Automatically, These functions will be Invoked
+only once through out the application...
+
+syntax :
+
+    (function(){
+        console.log("IIFE invoked);
+    })();
+
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            (function(){
+                console.log("hi");
+            })();
+        </script>
+    </body>
+</html>

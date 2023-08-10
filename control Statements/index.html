@@ -4,50 +4,18 @@
     </head>
     <body>
 
-        <select onchange="displayTestCenters()" id="town">
+        <input id="name" type="text" placeholder="enter the product name"><br><br>
+        <input id="price" type="text" placeholder="enter the product price"><br><br>
+        <input id="desc" type="text" placeholder="enter the product desc"><br><br>
+        <input id="url" type="text" placeholder="enter the product url"><br><br>
 
-            <option>Select Your Town</option>
-            <option value="hin">Hindupur</option>
-            <option value="gor">Gorantla</option>
-            <option value="pen">Penukonda</option>
-            <option value="Par">Parigi</option>
-            <option value="lep">Lepakshi</option>
+        <button onclick="addproduct()">Add Product</button>
 
-        </select>
+       <script>
 
-        <div id="msg">
+          
 
-        </div>
-
-        <select id="selectedTown">
-
-        </select>
-
-        <script>
-
-            displayTestCenters();
-            function displayTestCenters(){
-
-                var msg = document.getElementById("msg");
-
-                var town = document.getElementById("town").value;
-
-                var selectedTown = document.getElementById("selectedTown");
-
-                switch(town){
-
-                    case "hin" : selectedTown.innerHTML = "<option>subash nagar</option><option>subash nagari</option>"; break;
-                    case "gor" : selectedTown.innerHTML = "<option>goratla nagar</option><option>goratla nagari</option>"; break;
-                    case "pen" : selectedTown.innerHTML = "<option>penukonda nagar</option><option>penukonda nagari</option>"; break;
-                    case "Par" : selectedTown.innerHTML = "<option>parigi nagar</option><option>subashi nagari</option>"; break;
-                    case "lep" : selectedTown.innerHTML = "<option>Lepakshi nagar</option><option>Lepakshi nagari</option>"; break;
-                    default : msg.innerHTML = "<h1>please select town</h1>"
-
-
-                }
-            }
-
-        </script>
+       </script>
 
     </body>
 </html>

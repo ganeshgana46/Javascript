@@ -21,9 +21,9 @@ if-else :
 
 syntax :
 
-if(text-condition)[
+if(text-condition){
     //code to be executed when condition is true;
-]else{
+}else{
     //code to be executed when condition is false;
 }
 
@@ -263,3 +263,84 @@ Problem Statement :
         </script>
     </body>
 </html>
+
+Iteration Control Statements :
+
+If we want to execute a block of code multiple times, then we can use Iterative Statements
+
+ex : List of Products, List of users..
+
+while :
+
+syntax :
+
+while(test-condition){
+    //code
+}
+
+test-condition : results boolean value
+
+var index = 0;
+            while(index < 10){
+                console.log(index);
+                index++;
+            }
+
+code : 
+
+        <script>
+
+            var users = ["kiran","rajesh","nikhil","anil","venkat"];
+
+            var index = 0;
+
+            while(index < users.length){
+                console.log("User: " +users[index]);
+                index++;
+            }
+
+        </script>
+
+problem statement :
+
+display coments in UI : 
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <ul id="commentsList">
+
+        </ul>
+
+        <script>
+
+            var comments = ["This product is good","This products looks ok","Dont buy this","The quality is not up to mark"];
+
+            var index = 0;
+
+            var listItems = "";
+
+            while(index < comments.length){
+                listItems = listItems + "<li>" + comments[index] + "</li>";
+                index++;
+            }
+
+            var commentsList =  document.getElementById("commentsList");
+            commentsList.innerHTML = listItems;
+
+        </script>
+
+    </body>
+</html>
+
+Problem Statement :
+
+Implement a product management system using while loop.
+
+1. add product
+2. update product
+3. delete
+4.list all the products
