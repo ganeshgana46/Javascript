@@ -1,0 +1,65 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <script>
+
+            // var employee = {
+            //     id : 101,
+            //     name : "Gana",
+            //     city : "Chennai",
+            //     getDetails : function(state,country){
+            //         return this.id + " " + this.name + " " + this.city + " " + state + " " + country;
+            //     }
+            // }
+            // console.log(employee.getDetails("AP","India"));
+
+            // var employee2 = {
+            //     id : 102,
+            //     name : "Rajesh",
+            //     city : "Banglore"
+            // }
+            // var arr = ["TS","India"];
+            // console.log(employee.getDetails.call(employee2,arr[0],arr[1]));
+            // console.log(employee.getDetails.apply(employee2,arr));
+
+
+            // let dog = {
+            //     name : "dog",
+            //     bark : function(){
+            //         console.log(this.name,"is barking");
+            //     }
+            // }
+            // dog.bark();
+
+            // let parrot = {
+            //     name: 'parrot',
+            //     chirp : function(){
+            //         console.log(this.name,"is chirping");
+            //     }
+            // }
+
+            // let speak = dog.bark.bind(parrot);
+            // speak();
+
+            speak = function(sound){
+                console.log(this.name,"is",sound);
+            }
+            let dog = {
+                name : "dog"
+            }
+            let parrot = {
+                name :"Parrot"
+            }
+
+            bark = speak.bind(dog,"barking");
+            chrip = speak.bind(parrot,"chripping");
+            bark();
+            chrip();
+
+        </script>
+
+    </body>
+</html>
