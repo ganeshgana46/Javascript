@@ -1,0 +1,56 @@
+Web Services :
+
+Movie (4) -> PVR -> Screen2 -> 10 30 AM (8)
+
+BookMyShow - p1 -8 tickets - 4 tickets
+paytm - p2 - 4 tickets - 3 tickets
+justTickets - 1 tickets
+PVR Cinemas - 1 tickets
+
+Backend App : Data Providers (Web Service Providers->java, .net, python) 
+Frontend App : BMS, JS... (Web Service Consumers->JS, React, Angular)
+
+URL : https://fakestoreapi.com/products
+
+Problem Statement :
+
+Make an API call to fake store API and get the data from it  and show it on the UI
+
+States : 
+
+1. UNSENT : Client has been created. open() not called yet
+2. OPENED : open() has been called
+3. HEADERS_RECEIVED : send() has been called, and headers and status are available
+4. LOADING : Downloading; reponseTEXt holds paritial data.
+5. DoNE ; The operation is complete
+
+URL : https://jsonplaceholder.typicode.com/
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <script>
+
+            (function(){
+
+                var httpRequest = new XMLHttpRequest();
+
+                httpRequest.open('get',"https://fakestoreapi.com/products");
+
+                httpRequest.send();
+
+                httpRequest.onreadystatechange = function(){
+                    if(httpRequest.readyState == 4){
+                        console.log(httpRequest.responseText);
+                    }
+                }
+
+            })();
+
+        </script>
+
+    </body>
+</html>
