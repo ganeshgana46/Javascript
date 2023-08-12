@@ -1,0 +1,17 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function outer(){
+                var a = 10, b = 20;
+                function inner(){
+                    console.log(a);
+                    console.log(b);
+                }
+                inner();
+            }
+            outer();
+        </script>
+    </body>
+</html>

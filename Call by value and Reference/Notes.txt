@@ -1,0 +1,51 @@
+Call by Value & Call by Reference :
+
+CBV : In CBV, The value is passed instead of address
+
+1.The original variable is not modified on changes in other variables.
+2.Actual variable and copied variable will be created in different memory locations.
+3.On passing variables in a function, any changes made in the passed variable 
+will not affect the original one.
+
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var x = 100;
+            function f1(a){
+                console.log(a);//100
+                a = 200;
+            }
+            f1(x);//100 The value is passed
+            console.log(x);//100
+        </script>
+    </body>
+</html>
+
+CBV is applicale for Primitive types...
+
+CBR : In CBR, The address is passed...
+
+1.The original variable gets modified on changes in other variables.
+2.Actual variable and copied variables are created in the same memory location.
+3.On passing variables in a function, any changes made in the passed parameter
+ will update the original variable’s reference too.
+
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var arr = [10,20,30];
+            function f1(x){
+                x.push(40);
+                x.push(50);
+            }
+            f1(arr);//address is passed
+            console.log(arr);
+        </script>
+    </body>
+</html>
+
+CBV is applicale for Non-Primitive types...

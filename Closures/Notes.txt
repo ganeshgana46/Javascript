@@ -1,0 +1,35 @@
+Closures :
+
+closure is a scope that get formed when a function created inside another function...
+
+Note : JavaScript variables can belong to the local or global scope.
+       Global variables can be made local (private) with closures.
+
+function f1(){
+
+    function f2(){  // Closure scope
+
+    }
+
+}
+
+A function inside another function is known as nested function / inner function.
+If we want to create private methods then we use nested functions.
+
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function outer(){
+                var a = 10, b = 20;
+                function inner(){
+                    console.log(a);
+                    console.log(b);
+                }
+                inner();
+            }
+            outer();
+        </script>
+    </body>
+</html>
