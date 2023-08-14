@@ -92,3 +92,122 @@ Highlight, dehighlight the image based on the user mouse action.
     </body>
 </html>
 
+https://www.w3schools.com/jsref/dom_obj_event.asp
+
+Error Handling :
+
+Error handling is not the process of fixing bugs. 
+
+Whenever an error occurs in the application, the application gets terminated abnormally without 
+serving other users.
+
+Error handling is the process of skipping the part of the code that raised an error and continue 
+the rest of the flow.
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var a = 100, b = 200;
+            console.log(a);//100
+            console.log(c);//error
+            console.log(a+b);//this state not execute...
+
+        </script>
+    </body>
+</html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var a = 100, b = 200;
+            console.log(a);//100
+            try{
+                console.log(c);
+            }catch(error){
+                console.log("error");
+            }
+            console.log(a+b);///300
+        </script>
+    </body>
+</html>
+
+another example:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var user;
+        function getUser() {
+            // API Call
+            // user = {
+            //     name: "kiran",
+            //     address: "hyderabad"
+            // }
+        }
+        getUser();
+        try {
+            console.log(user.name);
+        }
+        catch (error) {
+            console.log("error", error);
+        }
+        var employee = {
+            name: "anil"
+        }
+        console.log(employee.name); // anil
+    </script>
+</body>
+
+</html>
+
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var user;
+        function getUser() {
+            //API Call
+            // user = {
+            //     name: "kiran",
+            //     address: "hyderabad"
+            // }
+        }
+        getUser();
+        try {
+            console.log("db connection opened");
+            console.log(user.name);
+        }
+        catch (error) {
+            console.log("error", error);
+            throw new Error("Log is not available");
+        }
+        finally {
+            console.log("close db connection");
+        }
+        var employee = {
+            name: "anil"
+        }
+        console.log(employee.name); // anil
+
+
+    </script>
+</body>
+
+</html>
