@@ -1,0 +1,21 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var form = document.createElement("form");
+            console.log("form",form);
+
+            var username = document.createElement("input");
+
+            username.id = "username";
+            username.type = "text";
+            username.placeholder = "username here";
+            username.size = "40";
+            console.log(username);
+            form.appendChild(username);
+            console.log(form);
+            document.body.appendChild(form);
+        </script>
+    </body>
+</html>
